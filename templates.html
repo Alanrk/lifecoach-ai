@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="探索AI生活教练的提示词模板库，包含目标设定、情绪管理、职业规划、时间管理等多个场景的专业AI提示词。支持ChatGPT、Claude、Kimi等多个AI模型，助你实现个人成长。">
+    <meta name="keywords" content="AI提示词模板,ChatGPT提示词,AI教练模板,目标设定提示词,情绪管理提示词,职业规划提示词,时间管理提示词,AI对话模板,个人成长提示词,AI助手提示词,Claude提示词,Kimi提示词">
+    <title>AI提示词模板库 | AI生活教练 | 专业的ChatGPT提示词</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJ8QDHX2');</script>
+<!-- End Google Tag Manager -->
+    <style>
+        /* 自定义滚动条样式 */
+        #preview-conversation::-webkit-scrollbar,
+        #editable-template::-webkit-scrollbar {  /* 添加编辑器的选择器 */
+            width: 6px;
+        }
+
+        #preview-conversation::-webkit-scrollbar-track,
+        #editable-template::-webkit-scrollbar-track {  /* 添加编辑器的选择器 */
+            background: transparent;
+        }
+
+        #preview-conversation::-webkit-scrollbar-thumb,
+        #editable-template::-webkit-scrollbar-thumb {  /* 添加编辑器的选择器 */
+            background-color: #E5E7EB;
+            border-radius: 3px;
+        }
+
+        #preview-conversation::-webkit-scrollbar-thumb:hover,
+        #editable-template::-webkit-scrollbar-thumb:hover {  /* 添加编辑器的选择器 */
+            background-color: #D1D5DB;
+        }
+    </style>
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6caa3aeac9b209453c2f57664d496c61";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ8QDHX2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- 导航栏 -->
+    <header class="sticky top-0 bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-10">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="src/img/logo.svg" alt="AI生活教练Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold text-gray-900">AI生活教练</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="templates.html" class="text-gray-600 hover:text-gray-900 transition-colors">模板库</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-gray-900 transition-colors">常见问题</a>
+    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 头部搜索区域 -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl font-bold text-white mb-8 text-center">
+                    探索AI生活教练提示词模板库
+                </h1>
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="search" 
+                               placeholder="搜索模板..." 
+                               class="w-full px-6 py-3 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        <button class="absolute right-3 top-3 text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 简化的筛选区域 -->
+        <section class="py-8 bg-white border-b sticky top-16 z-40">
+            <div class="container mx-auto px-4">
+                <!-- 分类筛选 -->
+                <div class="flex flex-wrap gap-4">
+                    <button data-filter="all" class="filter-btn px-4 py-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200">
+                        全部领域
+                    </button>
+                    <button data-filter="goal-setting" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        目标设定与实现
+                    </button>
+                    <button data-filter="time-management" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        时间管理
+                    </button>
+                    <button data-filter="emotion-management" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        情绪管理
+                    </button>
+                    <button data-filter="self-awareness" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        自我认知与成长
+                    </button>
+                    <button data-filter="career-planning" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        职业规划与发展
+                    </button>
+                    <button data-filter="relationship" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        人际关系与沟通
+                    </button>
+                    <button data-filter="health" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        健康管理
+                    </button>
+                    <button data-filter="decision" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        决策支持
+                    </button>
+                    <button data-filter="finance" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        财务管理
+                    </button>
+                    <button data-filter="life-balance" class="filter-btn px-4 py-2 rounded-full hover:bg-gray-100">
+                        生活平衡
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 简化的结果展示 -->
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <!-- 模板网格 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 目标设定与实现 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="goal-setting">
+                        <div class="p-6 flex flex-col h-full">  <!-- 确保有这些类名 -->
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    目标设定
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                                    入门难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">SMART目标设定助手</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">帮助你制定具体、可衡量、可实现、相关且有时限的目标。适用于个人发展、职业规划等领域。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">职业规划</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">学习目标</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">健康管理</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('goal-setting')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('goal-setting')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 时间理 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="time-management">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    时间管理
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                                    入门难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">时间块规划助手</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">基于番茄工作法，帮助你合理分配时间，提高工作效率，实现工作与生活的平衡。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">工作效率</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">时间规划</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">生活平衡</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('time-management')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('time-management')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 情绪管理 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="emotion-management">
+                        <div class="p-6 flex flex-col h-full">  <!-- 添加 flex flex-col h-full -->
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    情绪管理
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                                    中等难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow"> <!-- 添加 flex-grow -->
+                                <h2 class="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors">情绪觉察与调节</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">通过正念练习和认知重，帮助你识别、理解并有效管理各种情绪状态。</p>
+
+                                <!-- 使用场景签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">压力管理</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">情绪调节</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">心理健康</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">  <!-- 移除 flex-col -->
+                                <button onclick="showUseTemplate('emotion-management')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('emotion-management')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 自我认知与成长 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="self-awareness">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    自我认知
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                                    入门难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">优势探索工具</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">发现并发挥你的核心优势，制定个性化的成长计划，实现自我突破。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">性格优势</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">能力评估</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">个人成长</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('self-awareness')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('self-awareness')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 职业规划与发展 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="career-planning">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    职业规划
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                                    入门难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">职业发展规划师</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">分析职业兴趣与能力，制定清晰的职业发展路径，实现职业目标。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">职业定位</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">能力提升</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">职业转型</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('career-planning')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('career-planning')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 人际关系与沟通 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="relationship">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    人际关系
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                                    入门难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">有效沟通指导</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">掌握同理心倾听技巧，提升沟通效果，建立和谐的人际关系。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">人际沟通</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">冲突处理</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">团队协作</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('communication')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('communication')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 健康管理 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="health">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    健康管理
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                                    入门难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">健康生活方式规划</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">定制饮食运动计划，培养健康习惯，提升身心健康水平。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">饮食规划</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">运动计划</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">生活习惯</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('health')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('health')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 决策支持 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="decision">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    决策支持
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                                    进阶难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">决策分析助手</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">运用系统思维方法，权衡利弊得失，做出明智的决策选择。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">决策分析</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">风险评估</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">方案对比</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('decision')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('decision')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 财务管理 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="finance">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签��难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    财务管理
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                                    进阶难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">个人理财顾问</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">制定合理的预算计划，优化支出结构，实现财务目标。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">预算规划</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">投资理财</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">支出优化</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('finance')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('finance')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 生活平衡 -->
+                    <article class="template-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group" data-category="life-balance">
+                        <div class="p-6 flex flex-col h-full">
+                            <!-- 标签和难度等级 -->
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-200 transition-colors">
+                                    生活平衡
+                                </span>
+                                <div class="flex items-center gap-1 text-xs text-gray-500">
+                                    <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                                    进阶难度
+                                </div>
+                            </div>
+
+                            <!-- 标题和描述 -->
+                            <div class="flex-grow">
+                                <h2 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">生活平衡规划师</h2>
+                                <p class="text-gray-600 mb-4 line-clamp-2">平衡工作、生活、家庭各个方面，打造充实而平衡的生活方式。</p>
+                                
+                                <!-- 使用场景标签 -->
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">工作平衡</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">家庭关系</span>
+                                    <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">个人发展</span>
+                                </div>
+                            </div>
+
+                            <!-- 操作按钮 -->
+                            <div class="flex gap-3">
+                                <button onclick="showUseTemplate('life-balance')" 
+                                        class="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 group/btn">
+                                    <span>立即使用</span>
+                                    <svg class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                                <button onclick="showTemplatePreview('life-balance')"
+                                        class="px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors relative group/preview">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg opacity-0 invisible group-hover/preview:opacity-100 group-hover/preview:visible transition-all">
+                                        点击预览模板内容和使用效果
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 复用 index.html 的页脚 -->
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-semibold mb-4">关于我们</h3>
+                    <p class="text-sm">帮助你通过AI技术实现个人成长和目标达成</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">模板库</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li>邮箱：</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <!-- 社交媒体图标 -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>© 2024 AI生教练. 保留所有权.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const templateCards = document.querySelectorAll('.template-card');
+
+        // 处理筛选按钮点击
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 移除所有按钮的活跃状态
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-blue-100', 'text-blue-600');
+                    btn.classList.add('hover:bg-gray-100');
+                });
+
+                // 添加当前按钮的活跃状态
+                button.classList.add('bg-blue-100', 'text-blue-600');
+                button.classList.remove('hover:bg-gray-100');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                // 筛选模板卡片
+                templateCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        // 显示匹配的卡片
+                        card.style.display = 'block';
+                        // 添加淡入动画
+                        card.classList.add('fade-in');
+                    } else {
+                        // 隐藏不匹配的卡片
+                        card.style.display = 'none';
+                        card.classList.remove('fade-in');
+                    }
+                });
+            });
+        });
+
+        // 默选中"全部领域"
+        document.querySelector('[data-filter="all"]').click();
+
+        // 处理 URL 参数并触发对应的筛选
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+        
+        if (category) {
+            // 找到对应的筛选按钮
+            const targetButton = document.querySelector(`[data-filter="${category}"]`);
+            if (targetButton) {
+                // 触发点击事件
+                targetButton.click();
+                
+                // 滚动到模板区域
+                const templatesSection = document.querySelector('#templates');
+                if (templatesSection) {
+                    templatesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    });
+    </script>
+    <!-- 在 </body> 标签前添加模态框组件 -->
+    <div id="template-preview-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="min-h-screen px-4 text-center">
+            <!-- 模态框背景遮罩 -->
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+
+            <!-- 模态框内容 -->
+            <div class="inline-block w-full max-w-3xl p-6 my-8 text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">  <!-- 移除 style="max-height: 90vh; overflow-y: auto;" -->
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-900" id="preview-title">模板预览</h3>
+                    <button onclick="closeTemplatePreview()" class="text-gray-400 hover:text-gray-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- 预览内容区域 -->
+                <div class="space-y-6 mb-8">  <!-- 增加 mb-8 底部外边距 -->
+                    <!-- 模板说明 -->
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-blue-800 mb-2">使用说明</h4>
+                        <p class="text-blue-600 text-sm" id="preview-description"></p>
+                    </div>
+
+                    <!-- 对话示例 - 保留滚动样式 -->
+                    <div class="space-y-4">
+                        <h4 class="font-medium text-gray-900">对话示例</h4>
+                        <div class="bg-gray-100 p-4 rounded-lg space-y-4 max-h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400" id="preview-conversation">
+                            <!-- 动态插入对话内容 -->
+                        </div>
+                    </div>
+
+                    <!-- 使用步骤 -->
+                    <div>
+                        <h4 class="font-medium text-gray-900 mb-3">使用步骤</h4>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-600">
+                            <li>在下方的选项中选择你常用的Ai助手</li>
+                            <li>点击后会自动复制模板内容并跳转到对应的页面</li>
+                            <li>在Ai助手的聊天框中粘贴模板内容并根据提示开始对话</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 操作按钮部分 - 增加上下内边距 -->
+                <div class="mt-6 space-y-4 sticky bottom-0 bg-white pt-4 pb-2">  <!-- 增加 pb-2 -->
+                    <!-- AI平台快速跳转按钮 -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- ChatGPT -->
+                            <button onclick="console.log('ChatGPT按钮被点击'); handleCopyAndRedirect('chatgpt')" 
+                                class="p-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#10A37F] text-white hover:bg-[#0E906F]">  <!-- 将 p-4 改为 p-3 -->
+                                <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z" fill="currentColor"></path>
+                                </svg>
+                                <div class="text-left">
+                                    <div class="font-medium">使用 ChatGPT</div>
+                                    <div class="text-sm opacity-90">推荐 GPT-4 模型</div>
+                                </div>
+                            </button>
+                        
+                            <!-- Claude -->
+                            <button onclick="console.log('Claude按钮被点击'); handleCopyAndRedirect('claude')"
+                                class="p-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#6B3FA0] text-white hover:bg-[#5B357F]">  <!-- 将 p-4 改为 p-3 -->
+                                <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 46 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M32.73 0h-6.945L38.45 32h6.945L32.73 0ZM12.665 0 0 32h7.082l2.59-6.72h13.25l2.59 6.72h7.082L19.929 0h-7.264Zm-.702 19.337 4.334-11.246 4.334 11.246h-8.668Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <div class="text-left">
+                                    <div class="font-medium">使用 Claude</div>
+                                    <div class="text-sm opacity-90">推荐 Claude 3.5 模型</div>
+                                </div>
+                            </button>
+                        
+                            <!-- 豆包 -->
+                            <button onclick="console.log('豆包按钮被点击'); handleCopyAndRedirect('doubao')"
+                                class="p-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#FF6A00] text-white hover:bg-[#E65F00]">
+                                <img src="src/img/doubao-logo.png" alt="豆包 Logo" class="w-6 h-6 flex-shrink-0">
+                                <div class="text-left">
+                                    <div class="font-medium">使用豆包</div>
+                                    <div class="text-sm opacity-90">推荐豆包大模型</div>
+                                </div>
+                            </button>
+                        
+                            <!-- Kimi -->
+                            <button onclick="console.log('Kimi按钮被点击'); handleCopyAndRedirect('kimi')"
+                                class="p-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#7C3AED] text-white hover:bg-[#6D35D3]">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABhCAYAAAApxKSdAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUUSURBVHgB7Z29bhtHFIWPHQN2J7lKqnhYpYvpIukCbJEAKQJEegLReYFIT0DrCSI9QEDqCSIDaQIEIOukiJwyza5SJWlId3FFz+HuGmuSSw6p+dlZ3g84luhdUeI9M3fmziyXgBCUe/DHYY0Wj/tgWmjV42zFcWe4MIBBPNJ6qqW0uvAbXFvQgKzQK62bQhkaCIPc10q1Zi3XH1o/IG9cwUm0RogrgDY1KmLgHYX9DvyiBvDYI77XmiD+oLlQHw7hIDoCMBOt1U9w0BsU9mOAtaUUFk3oQoIfzAQFCf5dNMEdTFCQ4NtQih1NSIGgf3ibxOJt5UrAB1gNK72vIdjiI61HWr+YnNxDXK0rJiULsV65GJeiIescLSTTeobKSutiCuojX8kU3MBx4I3WeNVBBRl4fWiCyoB8v2JAAkk9PmDwT8sH1TEghRjgC27scCx41wO43KAg+ILxTvhNaUACwTc04Z0B30LwzTzm5Rjw3sgseIG1wGMawMBPIOQcqvzrNIMHOg9Q5KK953O90/rFC+BhJRH8PQZ+fu7SjC7HAIV95yu99vjlxfvBJx8nwHd6IfNJAkccOjHg6OgIs9lsra6vr2GTNE03/k7q8HAhyJ/2gM9O65/4kT7/mwEcoZwYsPQiV3BwcABb9Ho9KKU2njccDjGdLlxx+InBBPBAAR86ydRPaIC9SASi3+8bnXd+fr78nw8NJ39uDJjXAVFPP7dp/VmWLR9g6w6Huo/IOTk5MTpvZesn/93AiP/dXCwd9SyILT9Jko3n1bZ+8s8rGPGvoVHbEXcPMM39V1dX9Qd/19PPNxta959D4HUGF0RrAFs/8/8mxuPxXLUwtfx2WX+cxdivZ3DFA0SKldZPuPTAKrikbOlMOX+9zFu/Q2iAQoSY5H7mfeb/tXCT8MdneU9wNNCuQUXZA0ynnrUznyqOcrspUY4BJunHqPU3gOgMsNr6G0B0BpgUXrG0fhKVAaaF1/HxMWIhKgNMcj9Tz82Nk6rVGdav/tJ5eraJ0Wi01XPq1r/xOS8uLkJc6XYnRTMNXdf62eIvLy+jyftVghnQ7Xahe8FW59fBTRYOzosDNI1hJdz0lBQkBflkMBjMU5iL13pXRb8fYAJrB/a2db0oFHthAOEUliaYFHE+aaUBdZsvvFhApyM0idYZwOCvW4JmIWdSzPmidQaYrAGZ7iX4oFUGnJ2dGdUCTRqMozeANQCLsE6nA10JG/0Mx4KmDMbBCjEWR2yxu8LAM98vXulmCA2ovVLCI8EMYODWbpbvCXtTBzQVMSAwYkBgxIDAtNKAXWdGIRADAiMpKDA0IIMQikx6QGDEgMCIAYGRMSAsMgaEhgbcQgjFa+kBYZnIGBCWWzEgLPNBOJ6Fk/aR8Y5ZCvktKwX/PJZ7xoVjfs+4chYU11tK2sE85qUBLyH4Zh5z6QHhGPOf6r2j+TEbcgdFP2RaHX5TrYQlDflj5RXE5Q1cG/lWnhYpReUGKdUewGnRmhvnCJbgmxey8sHiZ8iwF3AsUBBckKHI/SWLq6HsBc8huML4DiK80D6WnBqLzN68UFCmopheYJOVYgcU5FOVbAVfYUcUZGoaLPglCtITdg2+tZUFBTFh2+ArWEYh/7z0WIIQSiM43lt5AWAmWhLHylN4QmkNEXfAbGqEQKsHSfHLYwiSq8AnaAAKeaW3D8VbijwNW5nh3IN9FPI/jnpaPKZi2/SfFuJu4W3x9RqWL+N5C+7ruKpBAgLkAAAAAElFTkSuQmCC"
+                                    alt="Kimi Logo" class="w-6 h-6 flex-shrink-0">
+                                <div class="text-left">
+                                    <div class="font-medium">使用 Kimi</div>
+                                    <div class="text-sm opacity-90">推荐 Kimi 大模型</div>
+                                </div>
+                            </button>
+                        </div>
+
+                    <!-- 复制和关闭按钮 -->
+                    <div class="flex gap-3">
+                        <button onclick="copyTemplateContent()" 
+                                class="flex-1 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                            <span>仅复制提示词</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                            </svg>
+                        </button>
+                        <button onclick="closeTemplatePreview()" 
+                                class="px-6 py-2 border border-gray-300 rounded-lg hover:border-gray-400 transition-colors">
+                            关闭预览
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加预览功能相关的 JavaScript -->
+    <script>
+    // 模板内容数据
+    const templateData = {
+        'goal-setting': {
+            title: 'SMART目标设定助手',
+            description: '这个提示词模板将帮助你制定符合SMART原则的目标。AI助手会引导你思考目标的具体性、可衡量性、可实现性、相关性和时限性。',
+            prompt: 
+`我需要你担任一个SMART目标设定教练。请帮助我制定具体的、可衡量的、可实现的、相关的、有时限的目标。
+
+请按以下步骤引导我：
+
+1. 询问我想要达成的目标领域
+2. 帮助我将模糊的目标具体化
+3. 设定可衡量的指标
+4. 评估目标的可实现性
+5. 确认目标整体发展的相关性
+6. 制定时间表和里程碑
+
+最后，总结完整的SMART目标，并提供行动建议。`,
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai'
+            },
+            conversation: [
+                { role: 'user', content: '我想提升我的编程技能。' },
+                { role: 'assistant', content: '这是个很好的目标方向。让我们一起将它变得更具体和可执行。首先，能告诉我你目前的编程水平，以及你最想掌握的具体编程领域吗？' },
+                { role: 'user', content: '我是一名初学者，想学习Web开发，特别是前端开发。' },
+                { role: 'assistant', content: '很好！让我们用SMART原则来细化你的目标：\n\n具体(Specific)：掌握HTML、CSS和JavaScript的基础知识，能够独立开发一个个人网站\n\n可衡量(Measurable)：完成3个实战项目，包括一个响应式网站\n\n可实现(Achievable)：每周投入10小时学习时间，按阶段学习\n\n相关(Relevant)：与你的Web开发职业规划直接相关\n\n时限(Time-bound)：3个月内完成基础学习和项目开发\n\n你觉得这个目标设定合理吗？我们可以根据你的具体情况调整。' }
+            ]
+        },
+        'emotion-management': {
+            title: '情绪觉察与调节',
+            description: '这个提示词模板将帮助你通过正念练习和认知重构方法，识别、理解并有效管理各种情绪状态。',
+            prompt: 
+`我需要你担任一个情绪管理教练。请帮助我觉察、理解并有效管理我的情绪状态。
+
+请按以下步骤引导我：
+
+1. 帮助我别当前的情绪状态
+2. 引导我觉察情绪在身体中的感受
+3. 探索触发这些情绪的原因
+4. 使用正念技巧和认知重构方法
+5. 制定情绪调节策略
+6. 提供预防性建议
+
+请以温和、支持的语气进行对话，帮助我更好地理解和管理情绪。`,
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai'
+            },
+            conversation: [
+                { role: 'user', content: '我最近感觉压力很大，情绪容易波动。' },
+                { role: 'assistant', content: '我理解你的感受。让我们先做一个简单的情绪觉察练习。告诉我，当下你感受到的情绪是什么它在身的哪个部位最明显？' },
+                // ... 更多对话内容
+            ]
+        },
+        'time-management': {
+            title: '时间块规划助手',
+            description: '这个提示词模板将帮助你使用番茄工作法进行时间管理，提高工作效率，实现工作与生活的平衡。',
+            prompt: 
+`我需要你担任一个时间管理教练。请帮助我使用番茄工作法来规划和管理时间。
+
+请按以下步骤引导我：
+
+1. 询问我的主要任务和目标
+2. 帮助我将任务分解成25分钟的工作块
+3. 设置合理的休息时间
+4. 制定每日和每周的时间表
+5. 提供专注度提升建议
+6. 跟踪和调整时间分配
+
+最后，总结完整的时间管理计划，并提供执行建议。`,
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai'
+            },
+            conversation: [
+                { role: 'user', content: '我想提高工作效率，更好地管理时间。' },
+                { role: 'assistant', content: '很好的想法！让我们先了解一下你的情况。能告诉我你目前面临的主要任务，以及每天大概有多少可支配的工作时间吗？' },
+                { role: 'user', content: '我是一名程序员，每天要处理编码、会议学习新技术，工作时间大约9小时。' },
+                { role: 'assistant', content: '明白了。让我们用番茄工作法来规划：\n\n1. 上黄金时段（9:00-12:00）：\n- 2个番茄钟用于核心编码任务\n- 1个番茄钟处理会议\n\n2. 下午（14:00-18:00）：\n- 2个番茄钟继续编码\n- 1个番茄钟学习新技术\n- 1个番茄钟处理临时任务\n\n每个番茄钟25分钟，休息5分钟。每完成4个番茄钟，休息15-20分钟。\n\n这个安排如何？我们可以根你的具体情况调整。' }
+            ]
+        },
+        'self-awareness': {
+            title: '优势探索工具',
+            description: '这个提示词模板将帮助你发现和理解自己的核心优势，并学会如何在生活和工作中充分发挥这些优势。',
+            prompt: 
+`我需要你担任一个优势探索教练。请帮助我发现和发展我的核心优势。
+
+请按以下步骤引导我：
+
+1. 引导我回顾过去的成功经历
+2. 帮助我识别这些经历中展现的优势
+3. 分析优势的具体表现和应用场景
+4. 探讨如何在当前工作和生活中运用这些优势
+5. 制定优势发展计划
+6. 设计实践练习和反馈机制
+
+最后，总结核心优势清单，并提供具体的应用建议。`,
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai'
+            },
+            conversation: [
+                { role: 'user', content: '我想更好地了解自己的优势。' },
+                { role: 'assistant', content: '很好的想法！让我们从你的具体经历开始。能否分享一个你感到特别成功或满意的经历？可以是工作中或生活中的。' },
+                { role: 'user', content: '在工作中，我经常能够快速理解复杂的问题，并找到创新的解决方案。' },
+                { role: 'assistant', content: '这是个很好的观察！从你的描述中，我能看到几个潜在的核心优势：\n\n1. 分析能力：快速理解复杂问题\n2. 创造力：找到创新解决方案\n3. 问题解决能力：将分析和创造力结合应用\n\n让我们深入探讨一个具体例子，你能描述一个你运用这些优势解决问题的具体案例吗？这样我们可以更好地理解这些优势是如何在实践中发挥作用的。' }
+            ]
+        },
+        'career-planning': {
+            title: '职业发展规划师',
+            description: '分析职业兴趣与能力，制定清晰的职业发展路径，实现职业目标。',
+            prompt: `我需要你担任一个职业发展规划师。请帮助我分析职业发展方向并制定具体的职业规划。
+
+作为职业规划师，请你：
+1. 首先询问我的教育背景、工作经验、技能特长和职业兴趣
+2. 帮助我分析当前职业发展的优势和不足
+3. 根据我的情况，推荐2-3个适合的职业发展方向
+4. 为每个发展方向制定具体的提升计划，包括：
+   - 需要获得的资格认证或技能
+   - 建议的学习路径和时间规划
+   - 可以寻找的实践机会
+5. 提供求职或职业转型的具体建议和注意事项
+
+最后，总结关键行动点，并制定90天的具体执行计。`,
+            conversation: [
+                {
+                    role: 'user',
+                    content: '我想寻求职业发展建议，目前在IT行业做前端开发，有3年工作经验。'
+                },
+                {
+                    role: 'assistant',
+                    content: '好的，为了给您提供更准确的职业规划建议，请先告诉我：\n1. 您的教育背景是什么？\n2. 除了前端开发，还掌握哪些技术栈？\n3. 在工作中最享受什么？最不喜欢什么？\n4. 您对未来的职业发展有什么期望？'
+                },
+                {
+                    role: 'user',
+                    content: '我是计算机专业本科毕业，主要做Vue和React开发，也懂一些Node.js。我喜欢解决技术难题，但不太喜欢重复性的工作。希望在技术领域继续发展，但不确定是往全栈还是技术管理方向发展。'
+                }
+            ],
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai',
+                doubao: 'https://www.doubao.com',
+                kimi: 'https://kimi.moonshot.cn/'
+            }
+        },
+        'communication': {
+            title: '有效沟通指导',
+            description: '掌握同理心倾听技巧，提升沟通效果，建立和谐的人际关系。',
+            prompt: `我需要你担任一个沟通教练。请帮助我提升沟通技巧，建立更好的人际关系。
+
+作为沟通教练，请你：
+1. 首先了解我当前面临的沟通困境或需求
+2. 分析沟通中的关键问题和改进机会
+3. 教授有效的沟通技巧，包括：
+   - 同理心倾听方法
+   - 清晰表达技巧
+   - 非语言沟通要素
+4. 提供具体的沟通场景练习
+5. 指导处理常见的沟通障碍和冲突
+
+最后，制定个性化的沟通提升计划，并提供实践建议。`,
+            conversation: [
+                {
+                    role: 'user',
+                    content: '我在团队沟通中经常遇到误解，希望提升沟通效果。'
+                },
+                {
+                    role: 'assistant',
+                    content: '了解您的困扰。为了更好地帮助您，请告诉我：\n1. 这些误解通常发生在什么样的场景中？\n2. 您觉得造成误解的主要原因是什么？\n3. 您在沟通时最感到困难的是什么？'
+                },
+                {
+                    role: 'user',
+                    content: '主要是在项目讨论中，我觉得我说得很清楚，但对方好像理解有偏差。有时我也会觉得别人说话太绕，不够直接。'
+                }
+            ],
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai',
+                doubao: 'https://www.doubao.com',
+                kimi: 'https://kimi.moonshot.cn/'
+            }
+        },
+        'health': {
+            title: '健康生活方式规划',
+            description: '定制饮食运动计划，培养健康习惯，提升身心健康水平。',
+            prompt: `我需要你担任一个健康生活教练。请帮助我制定科学的健康生活方案。
+
+作为健康教练，请你：
+1. 首先了解我的基本情况：
+   - 年龄、身高、体重等基本信息
+   - 当前的生活作息和饮食习惯
+   - 运动基础和健康目标
+2. 评估我当前的健康状况和生活方式
+3. 制定个性化的健康计划，包括：
+   - 科学的饮食建议和食谱推荐
+   - 适合的运动计划和训练方案
+   - 作息时间安排和习惯养成建议
+4. 提供具体的执行指导：
+   - 每日饮食记录方法
+   - 运动动作要领和注意事项
+   - 习惯养成的跟踪方式
+
+最后，制定90天的渐进式计划，并提供每周回顾和调整建议。`,
+            conversation: [
+                {
+                    role: 'user',
+                    content: '我想改善自己的生活方式，提升健康水平。'
+                },
+                {
+                    role: 'assistant',
+                    content: '很好的决定！为了给您制定合适的健康计划，请先告诉我：\n1. 您的年龄、身高、体重等基本信息\n2. 目前的作息时间和工作性质\n3. 有什么特别的健康目标吗？'
+                },
+                {
+                    role: 'user',
+                    content: '我28岁，身高175cm，体重70kg，是程序员，经常久坐，作息不规律，想改善体型和精力状态。'
+                }
+            ],
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai',
+                doubao: 'https://www.doubao.com',
+                kimi: 'https://kimi.moonshot.cn/'
+            }
+        },
+        'decision': {
+            title: '决策分析助手',
+            description: '运用系统思维方法，权衡利弊得失，做出明智的决策选择。',
+            prompt: `我需要你担任一个决策支持教练。请帮助我运用系统思维方法，权衡利弊得失，做出明智的决策选择。
+
+作为决策支持教练，请你：
+1. 首先了解我当前面临的决策困境或需求
+2. 分析决策中的关键问题和改进机会
+3. 教授决策分析的技巧，包括：
+   - 系统思维方法
+   - 利弊得失分析
+   - 风险评估和备选方案比较
+4. 提供具体的决策场景练习
+5. 指导处理常见的决策障碍和冲突
+
+最后，帮助我建立决策评估框架，并提供执行建议。`,
+            conversation: [
+                {
+                    role: 'user',
+                    content: '我在做重要决策时总是犹豫不决，希望能提高决策能力。'
+                },
+                {
+                    role: 'assistant',
+                    content: '了解您的困扰。为了更好地帮助您，请告诉我：\n1. 您最近面临什么具体的决策困境？\n2. 在做决策时，最让您困扰的是什么？\n3. 您通常如何评估不同的选择？'
+                },
+                {
+                    role: 'user',
+                    content: '我正在考虑是否要换工作。现在的工作稳定但发展有限，有个机会去创业公司，机会更多但风险也大。'
+                }
+            ],
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai',
+                doubao: 'https://www.doubao.com',
+                kimi: 'https://kimi.moonshot.cn/'
+            }
+        },
+        'finance': {
+            title: '个人理财顾问',
+            description: '制定合理的预算计划，优化支出结构，实现财务目标。',
+            prompt: `我需要你担任一个财务管理教练。请帮助我制定合理的预算计划，优化支出结构，实现财务目标。
+
+作为财务管理教练，请你：
+1. 首先了解我的财务状况和目标
+2. 分析我的支出结构和潜在的优化机会
+3. 教授财务管理的技巧，包括：
+   - 预算制定方法
+   - 支出分类和优先级排序
+   - 投资和储蓄策略
+4. 提供具体的财务管理实践建议
+5. 指导处理常见的财务障碍和冲突
+
+最后，制定个性化的财务提升计划，并提供实践建议。`,
+            conversation: [
+                {
+                    role: 'user',
+                    content: '我希望改善自己的财务状况，实现财务自由。'
+                },
+                {
+                    role: 'assistant',
+                    content: '很好的决定！为了给您制定合适的财务计划，请先告诉我：\n1. 您的当前收入和支出情况\n2. 您的主要财务目标是什么？\n3. 您对投资和储蓄有什么看法？'
+                },
+                {
+                    role: 'user',
+                    content: '我每月收入约1万元，支出约7000元，希望能在两年内存够10万元。'
+                }
+            ],
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai',
+                doubao: 'https://www.doubao.com',
+                kimi: 'https://kimi.moonshot.cn/'
+            }
+        },
+        'life-balance': {
+            title: '生活平衡规划师',
+            description: '平衡工作、生活、家庭各个方面，打造充实而平衡的生活方式。',
+            prompt: `我需要你担任一个生活平衡规划师。请帮助我平衡工作、生活、家庭各个方面，打造充实而平衡的生活方式。
+
+作为生活平衡规划师，请你：
+1. 首先了解我的工作和生活压力
+2. 分析我的时间分配和精力管理
+3. 制定个性化的生活平衡计划，包括：
+   - 工作与生活的平衡策略
+   - 家庭和个人时间的合理安排
+   - 压力管理和放松技巧
+4. 提供具体的执行指导：
+   - 每日时间记录方法
+   - 精力管理技巧和实践
+   - 家庭和个人事务的优先级排序
+x'x'x
+最后，制定90天的渐进式计划，并提供每周回顾和调整建议。`,
+            conversation: [
+                {
+                    role: 'user',
+                    content: '我觉得工作和生活压力很大，希望找到平衡点。'
+                },
+                {
+                    role: 'assistant',
+                    content: '了解您的困扰。为了更好地帮助您，请告诉我：\n1. 您目前的工作性质和压力程度\n2. 您如何安排家庭和个人时间\n3. 您觉得哪些方面需要改进？'
+                },
+                {
+                    role: 'user',
+                    content: '我是一名程序员，工作压力很大，经常加班，希望能找到工作和生活的平衡点。'
+                }
+            ],
+            platforms: {
+                chatgpt: 'https://chat.openai.com',
+                claude: 'https://claude.ai',
+                doubao: 'https://www.doubao.com',
+                kimi: 'https://kimi.moonshot.cn/'
+            }
+        }
+    };
+
+    function showTemplatePreview(templateId) {
+        const modal = document.getElementById('template-preview-modal');
+        const template = templateData[templateId];
+        
+        if (template) {
+            // 添加一个数据属性来存储当前模板ID
+            modal.setAttribute('data-current-template', templateId);  // 添加这行
+            
+            document.getElementById('preview-title').textContent = template.title;
+            document.getElementById('preview-description').textContent = template.description;
+            
+            // 清空并重新渲染对话示例
+            const conversationContainer = document.getElementById('preview-conversation');
+            conversationContainer.innerHTML = '';
+            
+            template.conversation.forEach(msg => {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `flex ${msg.role === 'assistant' ? 'justify-start' : 'justify-end'}`;
+                
+                messageDiv.innerHTML = `
+                    <div class="${msg.role === 'assistant' ? 'bg-white' : 'bg-blue-600 text-white'} rounded-lg px-4 py-2 max-w-[80%]">
+                        ${msg.content.replace(/\n/g, '<br>')}
+                    </div>
+                `;
+                
+                conversationContainer.appendChild(messageDiv);
+            });
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeTemplatePreview() {
+        const modal = document.getElementById('template-preview-modal');
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    function copyTemplateContent() {
+        // 直接从 templateData 中获取当前显示的模板
+        const templateId = 'goal-setting';  // SMART目标设定助手的ID
+        const template = templateData[templateId];
+        
+        if (template && template.prompt) {
+            navigator.clipboard.writeText(template.prompt.trim())
+                .then(() => {
+                    showToast('模板内容已复制到剪贴板！');
+                })
+                .catch(err => {
+                    console.error('复制失败:', err);
+                    showToast('复制失败，请手动复制模板内容。');
+                });
+        }
+    }
+
+    function useTemplate(templateId) {
+        const template = templateData[templateId];
+        if (template && template.prompt) {
+            navigator.clipboard.writeText(template.prompt)
+                .then(() => {
+                    showToast('模板内容已复制到剪贴板！');
+                })
+                .catch(() => {
+                    showToast('复制失败，请手动复制模板内容。');
+                });
+        }
+    }
+
+    function openWithPlatform(platform) {
+        const currentTemplate = document.getElementById('preview-title').textContent;
+        const templateId = Object.keys(templateData).find(key => 
+            templateData[key].title === currentTemplate
+        );
+        
+        if (templateId && templateData[templateId].platforms[platform]) {
+            const url = templateData[templateId].platforms[platform];
+            window.open(url, '_blank');
+        } else {
+            showToast('暂不支持该平台');
+        }
+    }
+
+    // 添加 showToast 函数
+    function showToast(message) {
+        const toast = document.getElementById('toast-message');
+        if (toast) {
+            toast.textContent = message;
+            toast.classList.remove('translate-y-full', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-full', 'opacity-0');
+            }, 3000);
+        }
+    }
+
+    function handleCopyAndRedirect(platform) {
+        // 获取当前显示的模板ID
+        const modal = document.getElementById('template-preview-modal');
+        const templateId = modal.getAttribute('data-current-template');
+        
+        // 获取模板内容
+        let content = '';
+        if (document.getElementById('editable-template')) {
+            // 如果在编辑模态框中
+            content = document.getElementById('editable-template').value;
+        } else if (templateId && templateData[templateId]) {
+            // 如果在预览模态框中
+            content = templateData[templateId].prompt;
+        }
+
+        if (!content) {
+            showToast('未找到模板内容');
+            return;
+        }
+
+        navigator.clipboard.writeText(content)
+            .then(() => {
+                showToast('模板已复制，正在跳转...');
+                setTimeout(() => {
+                    let url;
+                    switch(platform) {
+                        case 'chatgpt':
+                            url = 'https://chat.openai.com';
+                            break;
+                        case 'claude':
+                            url = 'https://claude.ai';
+                            break;
+                        case 'doubao':
+                            url = 'https://www.doubao.com';
+                            break;
+                        case 'kimi':
+                            url = 'https://kimi.moonshot.cn';
+                            break;
+                        default:
+                            url = 'https://chat.openai.com';
+                    }
+                    window.open(url, '_blank');
+                }, 1000);
+            })
+            .catch(err => {
+                console.error('复制失败:', err);
+                showToast('复制失败，请手动复制模板内容。');
+            });
+    }
+
+
+
+    // 显示使用模板的模态窗口
+    function showUseTemplate(templateId) {
+        const modal = document.getElementById('use-template-modal');
+        const template = templateData[templateId];
+        
+        if (template) {
+            document.getElementById('use-template-title').textContent = template.title;
+            document.getElementById('use-template-description').textContent = template.description;
+            
+            // 格式化模板内容
+            const formattedPrompt = template.prompt
+                .split('\n')
+                .map(line => line.trim())  // 移除每行开头和结尾的空格
+                .filter(line => line)      // 除空行
+                .join('\n\n');             // 用双换行连接各行
+            
+            document.getElementById('editable-template').value = formattedPrompt;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // 关闭使用模板的模态窗口
+    function closeUseTemplate() {
+        const modal = document.getElementById('use-template-modal');
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    // 复制编辑后的模板内容
+    function copyEditedTemplate() {
+        const editedContent = document.getElementById('editable-template').value;
+        navigator.clipboard.writeText(editedContent)
+            .then(() => {
+                showToast('模板内容已复制到剪贴板！');
+            })
+            .catch(() => {
+                showToast('复制失败，请手动复制模板内容。');
+            });
+    }
+
+    // 复制并跳转到指定平台
+    function copyAndRedirect(platform) {
+        const editedContent = document.getElementById('editable-template').value;
+        navigator.clipboard.writeText(editedContent)
+            .then(() => {
+                showToast('模板已复，正在跳转...');
+                setTimeout(() => {
+                    const url = platform === 'chatgpt' ? 'https://chat.openai.com' : 'https://claude.ai';
+                    window.open(url, '_blank');
+                }, 1000);
+            })
+            .catch(() => {
+                showToast('复制失败，请手动复制模板内容。');
+            });
+    }
+
+    // 搜索功能实现
+    function searchTemplates(searchTerm) {
+        console.log('执行搜索:', searchTerm); // 添加日志
+        
+        searchTerm = searchTerm.toLowerCase().trim();
+        
+        // 获取所有模板卡片
+        const templateCards = document.querySelectorAll('.template-card');
+        console.log('找到模板卡片数量:', templateCards.length); // 添加日志
+        
+        let matchCount = 0;
+        templateCards.forEach(card => {
+            // 获取标题和描述文本
+            const title = card.querySelector('h2')?.textContent.toLowerCase() || '';
+            const description = card.querySelector('p')?.textContent.toLowerCase() || '';
+            const tags = Array.from(card.querySelectorAll('.text-xs.px-2.py-1.bg-gray-100'))
+                .map(tag => tag.textContent.toLowerCase())
+                .join(' ');
+            
+            console.log('检查卡片:', { title, description, tags }); // 添加日志
+            
+            // 如果搜索词为空，显示所有卡片
+            if (!searchTerm) {
+                card.style.display = '';
+                matchCount++;
+                return;
+            }
+            
+            // 检查标题、描述或标签是否包含搜索词
+            if (title.includes(searchTerm) || 
+                description.includes(searchTerm) || 
+                tags.includes(searchTerm)) {
+                card.style.display = '';
+                matchCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        console.log('匹配结果数量:', matchCount); // 添加日志
+        
+        // 更新空状态显示
+        const noResultsElement = document.getElementById('no-results');
+        if (noResultsElement) {
+            if (searchTerm && matchCount === 0) {
+                noResultsElement.classList.remove('hidden');
+            } else {
+                noResultsElement.classList.add('hidden');
+            }
+        }
+    }
+
+    // 添加搜索框事件监听器
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM加载完成，初始化搜索功能'); // 添加日志
+        
+        // 获取搜索框和搜索按钮
+        const searchInputs = document.querySelectorAll('input[type="search"]');
+        const searchButtons = document.querySelectorAll('button[type="submit"], button.search-button');
+        
+        console.log('找到搜索框数量:', searchInputs.length); // 添加日志
+        console.log('找到搜索按钮数量:', searchButtons.length); // 添加日志
+        
+        // 为每个搜索框添加事件监听
+        searchInputs.forEach(searchInput => {
+            // 处理输入事件
+            searchInput.addEventListener('input', (e) => {
+                console.log('搜索框输入:', e.target.value); // 添加日志
+                searchTemplates(e.target.value);
+            });
+            
+            // 处理回车事件
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    console.log('按下回车键，执行搜索'); // 添加日志
+                    e.preventDefault();
+                    searchTemplates(e.target.value);
+                }
+            });
+        });
+        
+        // 为每个搜索按钮添加点击事件
+        searchButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('点击搜索按钮'); // 添加日志
+                
+                // 获取相关的搜索框
+                const searchInput = button.closest('div').querySelector('input[type="search"]');
+                if (searchInput) {
+                    console.log('执行搜索，搜索词:', searchInput.value); // 添加日志
+                    searchTemplates(searchInput.value);
+                } else {
+                    console.log('未找到关联的搜索框'); // 添加日志
+                }
+            });
+        });
+    });
+    </script>
+
+    <!-- 添加提示消息组件 -->
+    <div id="toast-message" 
+         class="fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full opacity-0 transition-all duration-300 z-[100]">
+    </div>
+
+    <!-- 添加使用模板的模态窗口 -->
+    <div id="use-template-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="min-h-screen px-4 text-center">
+            <!-- 模态框背景遮罩 -->
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+
+            <!-- 模态框内容 -->
+            <div class="inline-block w-full max-w-3xl p-6 my-8 text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                <!-- 标题区域 -->
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 id="use-template-title" class="text-2xl font-semibold text-gray-900 mb-2">情绪觉察与调节</h3>
+                        <p id="use-template-description" class="text-gray-600">通过正念练习和认知重构，帮助你识别、理解并有效管理各种情绪状态</p>
+                    </div>
+                    <button onclick="closeUseTemplate()" class="text-gray-400 hover:text-gray-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- 编辑区域 -->
+                <div class="space-y-6">
+                    <!-- 使用说明 -->
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-blue-800 mb-2">使用提示</h4>
+                        <p class="text-blue-600 text-sm">你以根据自己的具体情况修改以下内容，使AI更好地理解你的需求</p>
+                    </div>
+
+                    <!-- 模板内容编辑器 -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            提示词
+                        </label>
+                        <textarea id="editable-template" 
+                                class="w-full h-[300px] p-5 border border-gray-300 rounded-lg 
+                                       focus:ring-2 focus:ring-blue-500 focus:border-blue-500 
+                                       font-mono text-[15px] leading-[1.4]
+                                       whitespace-pre-wrap"
+                                spellcheck="false"
+                                placeholder="在这里编辑模板内容..."
+                        ></textarea>
+                    </div>
+
+                    <!-- 快速使用区域 -->
+                    <div class="space-y-4">
+                        <h4 class="font-medium text-gray-900">点击下方您常用的AI助手，将自动复制提示词并跳转至对应平台，在聊天栏中粘贴即可开始对话</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button onclick="console.log('ChatGPT按钮被点击'); handleCopyAndRedirect('chatgpt')" 
+                                    class="py-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#10A37F] text-white hover:bg-[#0E906F]">
+                                <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z" fill="currentColor"></path>
+                                </svg>
+                                <div class="text-left">
+                                    <div class="font-medium">使用 ChatGPT</div>
+                                    <div class="text-sm opacity-90">推荐 GPT-4 模型</div>
+                                </div>
+                            </button>
+                        
+                            <!-- Claude -->
+                            <button onclick="console.log('Claude按钮被点击'); handleCopyAndRedirect('claude')"
+                                class="p-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#6B3FA0] text-white hover:bg-[#5B357F]">  <!-- 将 p-4 改为 p-3 -->
+                                <svg class="w-6 h-6 flex-shrink-0" viewBox="0 0 46 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M32.73 0h-6.945L38.45 32h6.945L32.73 0ZM12.665 0 0 32h7.082l2.59-6.72h13.25l2.59 6.72h7.082L19.929 0h-7.264Zm-.702 19.337 4.334-11.246 4.334 11.246h-8.668Z"
+                                        fill="currentColor" />
+                                </svg>
+                                <div class="text-left">
+                                    <div class="font-medium">使用 Claude</div>
+                                    <div class="text-sm opacity-90">推荐 Claude 3.5 模型</div>
+                                </div>
+                            </button>
+                        
+                            <!-- 豆包 -->
+                            <button onclick="console.log('豆包按钮被点击'); handleCopyAndRedirect('doubao')"
+                                class="p-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#FF6A00] text-white hover:bg-[#E65F00]">
+                                <img src="src/img/doubao-logo.png" alt="豆包 Logo" class="w-6 h-6 flex-shrink-0">
+                                <div class="text-left">
+                                    <div class="font-medium">使用豆包</div>
+                                    <div class="text-sm opacity-90">推荐豆包大模型</div>
+                                </div>
+                            </button>
+                        
+                            <!-- Kimi -->
+                            <button onclick="console.log('Kimi按钮被点击'); handleCopyAndRedirect('kimi')"
+                                class="p-3 border rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-3 bg-[#7C3AED] text-white hover:bg-[#6D35D3]">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABhCAYAAAApxKSdAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUUSURBVHgB7Z29bhtHFIWPHQN2J7lKqnhYpYvpIukCbJEAKQJEegLReYFIT0DrCSI9QEDqCSIDaQIEIOukiJwyza5SJWlId3FFz+HuGmuSSw6p+dlZ3g84luhdUeI9M3fmziyXgBCUe/DHYY0Wj/tgWmjV42zFcWe4MIBBPNJ6qqW0uvAbXFvQgKzQK62bQhkaCIPc10q1Zi3XH1o/IG9cwUm0RogrgDY1KmLgHYX9DvyiBvDYI77XmiD+oLlQHw7hIDoCMBOt1U9w0BsU9mOAtaUUFk3oQoIfzAQFCf5dNMEdTFCQ4NtQih1NSIGgf3ibxOJt5UrAB1gNK72vIdjiI61HWr+YnNxDXK0rJiULsV65GJeiIescLSTTeobKSutiCuojX8kU3MBx4I3WeNVBBRl4fWiCyoB8v2JAAkk9PmDwT8sH1TEghRjgC27scCx41wO43KAg+ILxTvhNaUACwTc04Z0B30LwzTzm5Rjw3sgseIG1wGMawMBPIOQcqvzrNIMHOg9Q5KK953O90/rFC+BhJRH8PQZ+fu7SjC7HAIV95yu99vjlxfvBJx8nwHd6IfNJAkccOjHg6OgIs9lsra6vr2GTNE03/k7q8HAhyJ/2gM9O65/4kT7/mwEcoZwYsPQiV3BwcABb9Ho9KKU2njccDjGdLlxx+InBBPBAAR86ydRPaIC9SASi3+8bnXd+fr78nw8NJ39uDJjXAVFPP7dp/VmWLR9g6w6Huo/IOTk5MTpvZesn/93AiP/dXCwd9SyILT9Jko3n1bZ+8s8rGPGvoVHbEXcPMM39V1dX9Qd/19PPNxta959D4HUGF0RrAFs/8/8mxuPxXLUwtfx2WX+cxdivZ3DFA0SKldZPuPTAKrikbOlMOX+9zFu/Q2iAQoSY5H7mfeb/tXCT8MdneU9wNNCuQUXZA0ynnrUznyqOcrspUY4BJunHqPU3gOgMsNr6G0B0BpgUXrG0fhKVAaaF1/HxMWIhKgNMcj9Tz82Nk6rVGdav/tJ5eraJ0Wi01XPq1r/xOS8uLkJc6XYnRTMNXdf62eIvLy+jyftVghnQ7Xahe8FW59fBTRYOzosDNI1hJdz0lBQkBflkMBjMU5iL13pXRb8fYAJrB/a2db0oFHthAOEUliaYFHE+aaUBdZsvvFhApyM0idYZwOCvW4JmIWdSzPmidQaYrAGZ7iX4oFUGnJ2dGdUCTRqMozeANQCLsE6nA10JG/0Mx4KmDMbBCjEWR2yxu8LAM98vXulmCA2ovVLCI8EMYODWbpbvCXtTBzQVMSAwYkBgxIDAtNKAXWdGIRADAiMpKDA0IIMQikx6QGDEgMCIAYGRMSAsMgaEhgbcQgjFa+kBYZnIGBCWWzEgLPNBOJ6Fk/aR8Y5ZCvktKwX/PJZ7xoVjfs+4chYU11tK2sE85qUBLyH4Zh5z6QHhGPOf6r2j+TEbcgdFP2RaHX5TrYQlDflj5RXE5Q1cG/lWnhYpReUGKdUewGnRmhvnCJbgmxey8sHiZ8iwF3AsUBBckKHI/SWLq6HsBc8huML4DiK80D6WnBqLzN68UFCmopheYJOVYgcU5FOVbAVfYUcUZGoaLPglCtITdg2+tZUFBTFh2+ArWEYh/7z0WIIQSiM43lt5AWAmWhLHylN4QmkNEXfAbGqEQKsHSfHLYwiSq8AnaAAKeaW3D8VbijwNW5nh3IN9FPI/jnpaPKZi2/SfFuJu4W3x9RqWL+N5C+7ruKpBAgLkAAAAAElFTkSuQmCC"
+                                    alt="Kimi Logo" class="w-6 h-6 flex-shrink-0">
+                                <div class="text-left">
+                                    <div class="font-medium">使用 Kimi</div>
+                                    <div class="text-sm opacity-90">推荐 Kimi 大模型</div>
+                                </div>
+                            </button>
+                        </div>
+
+                    <!-- 复制和关闭按钮 -->
+                    <div class="flex gap-3">
+                        <button onclick="copyTemplateContent()" 
+                                class="flex-1 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                            <span>仅复制提示词</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                            </svg>
+                        </button>
+                        <button onclick="closeTemplatePreview()" 
+                                class="px-6 py-2 border border-gray-300 rounded-lg hover:border-gray-400 transition-colors">
+                            关闭预览
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 在模板列表容器内添加 -->
+    <div id="no-results" class="hidden w-full text-center py-8 text-gray-500">
+        未找到匹配的模板提示词
+    </div>
+</body>
+</html>

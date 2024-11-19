@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI生活教练是一个专业的AI提示词模板库，提供ChatGPT、Claude、Kimi等AI模型的教练提示词。覆盖情绪管理、职业发展、目标设定、时间管理、自我认知等多个领域，帮助你实现个人成长和目标达成。">
+    <meta name="keywords" content="AI生活教练,ChatGPT提示词,AI教练,个人成长,目标设定,情绪管理,职业规划,时间管理,自我提升,AI对话指南,Claude提示词,Kimi提示词,AI助手,个人发展,SMART目标,AI模板库">
+    <title>AI生活教练 | 专业的AI提示词模板库 | ChatGPT教练提示词</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <!-- 添加网站图标 -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJ8QDHX2');</script>
+<!-- End Google Tag Manager -->
+    <script type="module">
+        import { t, getUserLanguage } from './src/js/i18n.js';
+        window.t = t; // 使 t 函数全局可用
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // 设置初始语言
+            document.documentElement.lang = getUserLanguage();
+            
+            // 初始化翻译
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = t(key);
+            });
+        });
+    </script>
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6caa3aeac9b209453c2f57664d496c61";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ8QDHX2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- 顶部导航栏 -->
+    <header class="sticky top-0 bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-10">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="src/img/logo.svg" alt="AI生活教练Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold text-gray-900" data-i18n="brand.name">AI生活教练</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="templates.html" class="text-gray-600 hover:text-gray-900 transition-colors" data-i18n="nav.templates">模板库</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors" data-i18n="nav.faq">常见问题</a>
+                </div>
+            </div>
+            <!-- 添加语言切换按钮 -->
+            <div class="flex items-center space-x-4">
+                <button onclick="switchLanguage('zh')" class="text-sm text-gray-600 hover:text-gray-900">中文</button>
+                <button onclick="switchLanguage('en')" class="text-sm text-gray-600 hover:text-gray-900">English</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main>
+        <!-- Hero部分 -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    AI助你实现目标，改变生活
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    复制提示词，立即开启你的AI教练之旅
+                </p>
+                <a href="#templates" 
+                   class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
+                    立即开始
+                </a>
+            </div>
+        </section>
+
+        <!-- 特色优势 -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">为什么选择 AI 生活教练</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 即时反馈 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">即时反馈</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            实时分析你的需求，提供及时的建议和反馈，帮助你快速调整和进步
+                        </p>
+                    </div>
+
+                    <!-- 个性化指导 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">个性化指导</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            基于你的具体情况和目标，提供量身定制的建议，持续优化辅导方案
+                        </p>
+                    </div>
+
+                    <!-- 全天候服务 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">全天候服务</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            24/7随时可用，让你在任何时候都能获得所需的支持和指导
+                        </p>
+                    </div>
+
+                    <!-- 隐私保护 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">隐私保护</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            安全可靠的对话环境，让你可以自由讨论任何个人问题和目标
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 补充说明 -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        注意：AI作为辅助工具，提供的建议仅供参考，建议您结合个人具体情况和专业建议做出判断。对于重要决策，我们鼓励您寻求相关领域专家的意见。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分类区域 -->
+        <section class="py-16 bg-white" id="templates">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">选择你需要的领域</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- 目标设定与实现 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=goal-setting'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">目标设定与实现</h3>
+                        <p class="text-gray-600">制定清晰目标，获得个性化行动计划</p>
+                    </article>
+
+                    <!-- 时间管理与任务规划 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=time-management'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">时间管理</h3>
+                        <p class="text-gray-600">优化时间分配，提升工作效率</p>
+                    </article>
+
+                    <!-- 情绪管理与压力应对 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=emotion-management'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">情绪管理</h3>
+                        <p class="text-gray-600">掌控情绪，缓解压力与焦虑</p>
+                    </article>
+
+                    <!-- 自我认知与成长 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=self-awareness'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">自我认知与成长</h3>
+                        <p class="text-gray-600">深入了解自己，发掘个人潜能</p>
+                    </article>
+
+                    <!-- 职业规划与发展 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=career-planning'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">职业规划与发展</h3>
+                        <p class="text-gray-600">规划职业路径，提升职场竞争力</p>
+                    </article>
+
+                    <!-- 人际关系与沟通 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=relationship'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">人际关系与沟通</h3>
+                        <p class="text-gray-600">提升沟通巧，建立良好关系</p>
+                    </article>
+
+                    <!-- 健康管理 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=health'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">健康管理</h3>
+                        <p class="text-gray-600">科学饮食运动，保持健康生活</p>
+                    </article>
+
+                    <!-- 决策支持 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=decision'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">决策支持</h3>
+                        <p class="text-gray-600">理性分析决策，做出明智选择</p>
+                    </article>
+
+                    <!-- 财务管理 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=finance'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">财务管理</h3>
+                        <p class="text-gray-600">优化支出，实现财务目标</p>
+                    </article>
+
+                    <!-- 生活平衡 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=life-balance'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">生活平衡</h3>
+                        <p class="text-gray-600">平衡工作生活，提升幸福感</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用说明 -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">三步开始使用</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 第一步 -->
+                    <div class="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                            1
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">选择模板</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            浏览我们丰富的模板库，根据你的需求选择合适的AI教练模板。每个模板都经过精心设计，针对特定场景优化。
+                        </p>
+                    </div>
+
+                    <!-- 第二步 -->
+                    <div class="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                            2
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">复制提示词</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            点击复制按钮，获取精心编写的AI提示词。这些提示词经过优化，能够帮助AI更好地理解你的需求。
+                        </p>
+                    </div>
+
+                    <!-- 第三步 -->
+                    <div class="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                            3
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">开始对话</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            将提示词粘贴到ChatGPT对话框中，开始你的AI教练之旅。根据AI的反馈，逐步实现你的目标。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 补充说明 -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">
+                        需���帮助？查看我们的
+                        <a href="#faq" class="text-blue-600 hover:text-blue-700 underline">常见问题</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- 常见问题 -->
+        <section class="py-16 bg-white" id="faq">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">常见问题</h2>
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <!-- 如何开始使用 -->
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">如何开始使用AI生活教练？</h3>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                开始使用AI生活教练非常简单，只需要三个步骤：<br>
+                                1. 在模板库中选择适合你需求的模板<br>
+                                2. 点击"立即使用"按钮复制提示词<br>
+                                3. 将提示词粘贴到你常用的AI助手对话框中即可开始对话<br><br>
+                                <span class="text-blue-600">提示：建议从基础模板开始尝试，逐步探索更高级的功能。</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 需要什么准备 -->
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">需要什么准备工作？</h3>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                使用AI生活教练需要：<br>
+                                1. 一个ChatGPT、Claude、豆包、Kimi账号（推荐Plus版本）<br>
+                                2. 明确的目标或需求<br>
+                                3. 基本的文字表达能力<br><br>
+                                <span class="text-blue-600">注意：首次使用时，建议花几分钟浏览我们的快速入门指南。</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 如何发挥最佳效果 -->
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">如何让AI教练发挥最佳效果？</h3>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                要获得最佳效果，建议：<br>
+                                1. 清晰描述你的具体目标和现状<br>
+                                2. 诚实回答AI提出的问题<br>
+                                3. 积极参与互动，提供详细反馈<br>
+                                4. 坚持执行AI给出的建议和行动计划<br>
+                                5. 定期回顾和调整目标<br><br>
+                                <span class="text-blue-600">记住：AI教练的效果取决于你的投入和执行力。</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 查看更多链接 -->
+                    <div class="text-center mt-8">
+                        <a href="faq.html" class="inline-flex items-center text-blue-600 hover:text-blue-700">
+                            查看更多问题
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA区域 -->
+        <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">准备好开始你的AI辅导之旅了吗？</h2>
+                <p class="text-xl mb-8 text-blue-100">立即开始使用，让AI助你实现目标</p>
+                <div class="space-x-4">
+                    <a href="#templates" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50">
+                        立即开始
+                    </a>
+                    <a href="#faq" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">
+                        了解更多
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-semibold mb-4">关于我们</h3>
+                    <p class="text-sm">帮助你通过AI技术实现个人成长和目标达成</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">模板库</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li>邮箱：</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <!-- 社交媒体图标 -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>© 2024 AI生活教练. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ折叠面板功能
+            const faqButtons = document.querySelectorAll('article button');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const arrow = button.querySelector('svg');
+                    
+                    // 切换内容显示状态
+                    content.classList.toggle('hidden');
+                    // 旋转箭头
+                    arrow.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
