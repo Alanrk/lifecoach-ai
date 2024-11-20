@@ -223,6 +223,12 @@ const translations = {
 
 // 获取用户语言
 function getUserLanguage() {
+    // 优先读取用户设置的语言
+    const savedLang = localStorage.getItem('userLanguage');
+    if (savedLang && ['zh', 'en'].includes(savedLang)) {
+        return savedLang;
+    }
+    // 否则使用浏览器语言
     const browserLang = navigator.language.toLowerCase().split('-')[0];
     return ['zh', 'en'].includes(browserLang) ? browserLang : 'en';
 }

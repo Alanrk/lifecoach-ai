@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Life Coach is a professional AI prompt template library providing coaching prompts for ChatGPT, Claude, Kimi and other AI models. Covering emotional management, career development, goal setting, time management,">
+    <meta name="keywords" content="AI Life Coach, ChatGPT prompts, AI coach, personal growth, goal setting, emotional management, career planning, time management, self-improvement, AI dialogue guide, Claude prompts, Kimi prompts, AI assistant, personal development, SMART goals, AI template library">
+    <meta name="msvalidate.01" content="95F687B6489089359B18DE496FD5F23B" />
+    <title>AI Life Coach | Professional AI Prompt Template Library | ChatGPT Coach Prompts</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <!-- 添加网站图标 -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QGC31E4RQ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QGC31E4RQ2');
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6caa3aeac9b209453c2f57664d496c61";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- 顶部导航栏 -->
+    <header class="sticky top-0 bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-10">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="../src/img/logo.svg" alt="AI Life Coach Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold text-gray-900" data-i18n="brand.name">AI Life Coach</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="templates.html" class="text-gray-600 hover:text-gray-900 transition-colors" data-i18n="nav.templates">Templates</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-gray-900 transition-colors" data-i18n="nav.faq">FAQ</a>
+                </div>
+            </div>
+            <!-- 添加语言切换按钮 -->
+            <div class="flex items-center space-x-4">
+                <a href="../zh-cn/index.html" class="text-sm text-gray-600 hover:text-gray-900" 
+                   onclick="localStorage.setItem('userLanguage', 'zh')">中文</a>
+                <a href="../en/index.html" class="text-sm text-gray-600 hover:text-gray-900"
+                   onclick="localStorage.setItem('userLanguage', 'en')">English</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main>
+        <!-- Hero部分 -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    AI Helps You Achieve Goals and Transform Life
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    Copy prompts, start your AI coaching journey now
+                </p>
+                <a href="#templates" 
+                   class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
+                   Get Started
+                </a>
+            </div>
+        </section>
+
+        <!-- 特色优势 -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">Why Choose AI Life Coach</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 即时反馈 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Instant Feedback</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Real-time analysis of your needs, providing timely advice and feedback to help you adjust and improve quickly
+                        </p>
+                    </div>
+
+                    <!-- 个性化指导 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Personalized Guidance</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Provide tailored advice based on your specific situation and goals, continuously optimizing coaching plans
+                        </p>
+                    </div>
+
+                    <!-- 全天候服务 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">24/7 Service</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Available anytime, ensuring you get the support and guidance you need whenever you need it
+                        </p>
+                    </div>
+
+                    <!-- 隐私保护 -->
+                    <div class="text-center p-8 bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-blue-600 mb-6">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Privacy Protection</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Secure and reliable conversation environment for freely discussing any personal issues and goals
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 补充说明 -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Note: AI serves as an assistive tool, and its advice is for reference only. We recommend making decisions based on your specific circumstances and professional advice. For important decisions, we encourage seeking expert opinions in relevant fields.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分类区域 -->
+        <section class="py-16 bg-white" id="templates">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">Choose Your Area of Focus</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- 目标设定与实现 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=goal-setting'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Goal Setting & Achievement</h3>
+                        <p class="text-gray-600">Set clear goals, get personalized action plans</p>
+                    </article>
+
+                    <!-- 时间管理与任务规划 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=time-management'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Time Management</h3>
+                        <p class="text-gray-600">Optimize time allocation, improve work efficiency</p>
+                    </article>
+
+                    <!-- 情绪管理与压力应对 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=emotion-management'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Emotional Management</h3>
+                        <p class="text-gray-600">Manage emotions, alleviate stress and anxiety</p>
+                    </article>
+
+                    <!-- 自我认知与成长 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=self-awareness'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Self-awareness and Growth</h3>
+                        <p class="text-gray-600">Deeply understand yourself, discover personal potential</p>
+                    </article>
+
+                    <!-- 职业规划与发展 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=career-planning'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Career Planning and Development</h3>
+                        <p class="text-gray-600">Plan your career path, enhance workplace competitiveness</p>
+                    </article>
+
+                    <!-- 人际关系与沟通 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=relationship'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Relationship and Communication</h3>
+                        <p class="text-gray-600">Improve communication skills, establish good relationships</p>
+                    </article>
+
+                    <!-- 健康管理 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=health'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Health Management</h3>
+                        <p class="text-gray-600">Scientific diet and exercise, maintain a healthy lifestyle</p>
+                    </article>
+
+                    <!-- 决策支持 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=decision'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Decision Support</h3>
+                        <p class="text-gray-600">Rational analysis of decisions, make wise choices</p>
+                    </article>
+
+                    <!-- 财务管理 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300" 
+                             onclick="window.location.href='templates.html?category=finance'" 
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Financial Management</h3>
+                        <p class="text-gray-600">Optimize spending, achieve financial goals</p>
+                    </article>
+
+                    <!-- 生活平衡 -->
+                    <article class="template-card hover-shadow-effect bg-white rounded-xl shadow-lg p-6 transition-all duration-300"
+                             onclick="window.location.href='templates.html?category=life-balance'"
+                             style="cursor: pointer;">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Life Balance</h3>
+                        <p class="text-gray-600">Balance work and life, enhance happiness</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用说明 -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">Three Steps to Start</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 第一步 -->
+                    <div class="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                            1
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Choose Template</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Browse our rich template library and choose the AI coach template that suits your needs. Each template is carefully designed and optimized for specific scenarios.
+                        </p>
+                    </div>
+
+                    <!-- 第二步 -->
+                    <div class="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                            2
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Copy Prompts</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Click the copy button to get carefully crafted AI prompts. These prompts are optimized to help AI better understand your needs.
+                        </p>
+                    </div>
+
+                    <!-- 第三步 -->
+                    <div class="text-center bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                            3
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Start Conversation</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Paste the prompts into the ChatGPT conversation box and start your AI coaching journey. Follow AI's feedback to gradually achieve your goals.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 补充说明 -->
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">
+                        Need help? Check out our
+                        <a href="#faq" class="text-blue-600 hover:text-blue-700 underline">FAQ</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- 常见问题 -->
+        <section class="py-16 bg-white" id="faq">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 decorated-title">FAQ</h2>
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <!-- 如何开始使用 -->
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">How to Start Using AI Life Coach?</h3>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                Starting with AI Life Coach is very simple. Just follow these three steps:<br>
+                                1. Select the template that suits your needs from our template library<br>
+                                2. Click the "Get Started" button to copy the prompts<br>
+                                3. Paste the prompts into your preferred AI assistant conversation box to start the conversation<br><br>
+                                <span class="text-blue-600">Tip: We recommend starting with basic templates and gradually exploring more advanced features.</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 需要什么准备 -->
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What Preparation is Needed?</h3>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                To use AI Life Coach, you need:<br>
+                                1. A ChatGPT, Claude, DouDou, or Kimi account (recommended Plus version)<br>
+                                2. A clear goal or need<br>
+                                3. Basic text expression skills<br><br>
+                                <span class="text-blue-600">Note: For the first time, we recommend spending a few minutes browsing our quick start guide.</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 如何发挥最佳效果 -->
+                    <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">How to Make the Most of AI Life Coach?</h3>
+                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <p class="text-gray-600">
+                                To get the best results, we recommend:<br>
+                                1. Clearly describe your specific goals and current situation<br>
+                                2. Be honest with AI's questions<br>
+                                3. Participate actively, providing detailed feedback<br>
+                                4. Stick to the AI's suggestions and action plans<br>
+                                5. Regularly review and adjust goals<br><br>
+                                <span class="text-blue-600">Remember: The effectiveness of AI Life Coach depends on your commitment and execution.</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- 查看更多链接 -->
+                    <div class="text-center mt-8">
+                        <a href="faq.html" class="inline-flex items-center text-blue-600 hover:text-blue-700">
+                            View More Questions
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA区域 -->
+        <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold text-center mb-12">Ready to Start Your AI Coaching Journey?</h2>
+                <p class="text-xl mb-8 text-blue-100">Start now and let AI help you achieve your goals</p>
+                <div class="space-x-4">
+                    <a href="#templates" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50">
+                        Get Started
+                    </a>
+                    <a href="#faq" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-semibold mb-4">About Us</h3>
+                    <p class="text-sm">Helping you achieve personal growth and goals through AI technology</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Templates</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li>Email:</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <!-- 社交媒体图标 -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>© 2024 AI Life Coach. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqButtons = document.querySelectorAll('article button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Get the content panel and arrow icon
+                    const content = button.nextElementSibling;
+                    const arrow = button.querySelector('svg');
+                    
+                    // Toggle the content visibility
+                    content.classList.toggle('hidden');
+                    
+                    // Rotate the arrow icon
+                    arrow.style.transform = content.classList.contains('hidden') 
+                        ? 'rotate(0deg)' 
+                        : 'rotate(180deg)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
